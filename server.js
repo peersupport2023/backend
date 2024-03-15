@@ -9,9 +9,9 @@ const mentorRoute = require("./router/mentor-route");
 const errorMiddleware = require("./middlewares/error-middleware");
 const connectDB = require("./utils/db");
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "http://peersupport.co.in",
   methods: "POST,GET,PUT,DELETE,HEAD,PATCH",
   credentials: true,
 };
