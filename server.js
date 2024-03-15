@@ -11,10 +11,18 @@ const connectDB = require("./utils/db");
 
 const PORT = process.env.PORT || 8000;
 const corsOptions = {
-  origin: "http://peersupport.co.in",
+  origin: function (origin, callback) {
+    if (!origin || origin === "http://peersupport.co.in" || origin === "https://peersupport.co.in" || origin === "http://localhost:5173") {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: "POST,GET,PUT,DELETE,HEAD,PATCH",
   credentials: true,
 };
+
+
 
 app.use(cors(corsOptions));
 app.use(express.json()); // for parsing application/json
