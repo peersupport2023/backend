@@ -11,7 +11,7 @@ const connectDB = require("./utils/db");
 
 const PORT = process.env.PORT || 8000;
 const corsOptions = {
-  origin: "https://peersupport.co.in/",
+  origin: "https://peersupport.co.in",
   methods: "POST,GET,PUT,DELETE,HEAD,PATCH",
   credentials: true,
 };
