@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8000;
 const corsOptions = {
   origin: function (origin, callback) {
     // Check if the origin is allowed, or allow all origins with '*'
-    if (!origin || origin === "https://peersupport.co.in") {
+    if (!origin || origin === "http://peersupport.co.in") {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
