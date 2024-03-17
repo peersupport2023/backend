@@ -4,7 +4,7 @@ const mentorSchema = new Schema({
   id: { type: Number, required: true },
   image: { type: String, required: true },
   name: { type: String, required: true },
-  college: { type: Boolean, required: true },
+  college: { type: String, required: true },
   linkedinUsername: { type: String, required: true },
 });
 
